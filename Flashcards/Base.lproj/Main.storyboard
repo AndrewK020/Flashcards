@@ -40,8 +40,26 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFk-RA-w3Y">
+                                <rect key="frame" x="320" y="617" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="didTapOnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JsC-MA-DP6"/>
+                                    <action selector="didTapOnNext:" destination="bFh-ZP-WYg" eventType="touchUpInside" id="RPQ-Qb-SvL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkr-Ie-JaO">
+                                <rect key="frame" x="24" y="617" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Prev"/>
+                                <connections>
+                                    <action selector="didTapOnPrev:" destination="bFh-ZP-WYg" eventType="touchUpInside" id="DjY-IA-XCR"/>
+                                    <action selector="didTapOnPrev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y3H-kF-1hK"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHC-Rh-3hj">
-                                <rect key="frame" x="172" y="596" width="30" height="30"/>
+                                <rect key="frame" x="172" y="617" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="+"/>
                                 <connections>
@@ -59,10 +77,13 @@
                     <connections>
                         <outlet property="answerLabel" destination="t22-EF-VcU" id="QcE-tQ-SrZ"/>
                         <outlet property="card" destination="MYV-aU-8Nc" id="PIH-Pr-LPV"/>
+                        <outlet property="nextButton" destination="GFk-RA-w3Y" id="zWu-96-uRD"/>
+                        <outlet property="prevButton" destination="mkr-Ie-JaO" id="EvU-OP-q9r"/>
                         <outlet property="questionLabel" destination="5Zg-je-ZUr" id="Naw-Zp-yOH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="bFh-ZP-WYg" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="cKx-c5-18o">
                     <connections>
                         <action selector="didTapOnFlashCard:" destination="BYZ-38-t0r" id="LVP-se-FHf"/>
